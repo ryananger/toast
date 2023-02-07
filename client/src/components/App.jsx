@@ -15,7 +15,14 @@ const App = function() {
   return (
     <div id='app' className='app'>
       <Alert />
-      App
+      <h1>
+        App
+      </h1>
+      <div className='v'>
+        <h3>This is a template app that uses 'ryscott-st' for state management.</h3>
+        <br/><br/>
+        <h2>Press F to create an alert.</h2>
+      </div>
     </div>
   )
 };

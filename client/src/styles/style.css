@@ -27,7 +27,7 @@ html, body, #root, .app {
   width: 100%;
   font-family: Jost;
 
-  background-color: var(--bg);
+  background-color: var(--cream);
   color: var(--darkText);
 }
 
@@ -36,6 +36,7 @@ h1, h2, h3 {
 }
 
 .v {
+  flex: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,6 +44,7 @@ h1, h2, h3 {
 }
 
 .h {
+  flex: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -63,13 +65,13 @@ h1, h2, h3 {
   z-index: 11;
   position: absolute;
   bottom: 10vh;
-  background-color: var(--cream);
   min-width: 200px;
   width: max-content;
   padding: 1vh;
   border-radius: 25px;
   border: 2px solid var(--darkText);
   box-shadow: 0 2px 3px var(--shadow);
+  background-color: var(--cream);
 }
 
 .visible {

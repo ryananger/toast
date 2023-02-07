@@ -26,7 +26,7 @@ window.addEventListener('keypress', function(e) {
 
   switch (e.key) {
     case 'f':
-      console.log('test');
+      helpers.alert('Someone pressed F.');
       break;
   }
 });
