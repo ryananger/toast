@@ -1,10 +1,8 @@
 import React, {useEffect, useState} from 'react';
 
-import '../styles/login.css';
-import st      from './state.js';
-import ax      from '../util/ax.js';
-import auth    from '../util/auth.js';
-import helpers from '../util/helpers.js';
+import '../styles/style.css';
+import st            from 'ryscott-st';
+import {ax, helpers} from 'util';
 
 const Login = function() {
   const [signUp, setSignUp] = useState(false);

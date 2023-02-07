@@ -41,7 +41,7 @@ var logOut = function() {
   signOut(auth).then(() => {
     console.log('Firebase signOut successful.')
   }).catch((error) => {
-      console.log(error);
+    console.log(error);
   });
 };
 

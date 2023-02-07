@@ -1,17 +1,17 @@
 import React, {useEffect, useState} from 'react';
 
 import '../styles/style.css';
-import st      from './state.js';
-import ax      from '../util/ax.js';
-import input   from '../util/input.js';
-import helpers from '../util/helpers.js';
+import st            from 'ryscott-st';
+import {ax, helpers} from 'util';
 
 import Alert   from './Alert.jsx';
 import Login   from './Login.jsx';
 
-var cookie = cookieParse();
+var cookie = helpers.cookieParse();
 
 const App = function() {
+  useEffect(()=>{helpers.alert('This is an app with an alert.')});
+
   return (
     <div id='app' className='app'>
       <Alert />

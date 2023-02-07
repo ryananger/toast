@@ -1,4 +1,4 @@
-import st      from '../components/state.js';
+import st      from 'ryscott-st';
 import ax      from './ax.js';
 import helpers from './helpers.js';
 
@@ -26,6 +26,7 @@ window.addEventListener('keypress', function(e) {
 
   switch (e.key) {
     case 'f':
+      console.log('test');
       break;
   }
 });
