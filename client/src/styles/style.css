@@ -27,7 +27,7 @@ html, body, #root, .app {
   width: 100%;
   font-family: Jost;
 
-  background-color: var(--cream);
+  background-color: var(--bg);
   color: var(--darkText);
 }
 
@@ -39,8 +39,10 @@ h1, h2, h3 {
   flex: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding: 2vh;
+  box-sizing: border-box;
 }
 
 .h {
@@ -49,6 +51,8 @@ h1, h2, h3 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 2vh;
+  box-sizing: border-box;
 }
 
 /* --- */

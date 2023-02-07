@@ -13,7 +13,7 @@ const App = function() {
   useEffect(()=>{helpers.alert('This is an app with an alert.')});
 
   return (
-    <div id='app' className='app'>
+    <div id='app' className='app v'>
       <Alert />
       <h1>
         App
