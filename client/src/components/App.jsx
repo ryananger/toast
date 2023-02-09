@@ -10,6 +10,9 @@ import Login   from './Login.jsx';
 var cookie = helpers.cookieParse();
 
 const App = function() {
+  const [user, setUser] = st.newState('user', useState(null));
+  const [view, setView] = st.newState('view', useState('home'));
+
   useEffect(()=>{helpers.alert('This is an app with an alert.')});
 
   return (
