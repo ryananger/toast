@@ -33,9 +33,9 @@ const App = function() {
 
     return (
       <div className='mainImages v'>
-        <img className='mainImage img' src={`http://localhost:4001/public/food${viewImages[view][0]}.jpg`}/>
-        <img className='mainImage img' src={`http://localhost:4001/public/food${viewImages[view][1]}.jpg`}/>
-        <img className='mainImage img' src={`http://localhost:4001/public/food${viewImages[view][2]}.jpg`}/>
+        <img className='mainImage img' src={`${process.env.URL}/public/food${viewImages[view][0]}.jpg`}/>
+        <img className='mainImage img' src={`${process.env.URL}/public/food${viewImages[view][1]}.jpg`}/>
+        <img className='mainImage img' src={`${process.env.URL}/public/food${viewImages[view][2]}.jpg`}/>
       </div>
     );
   };
@@ -43,7 +43,7 @@ const App = function() {
   return (
     <div id='app' className='app h'>
       <Alert />
-      <img className='bgImage' src='http://localhost:4001/public/brick.jpg'/>
+      <img className='bgImage' src={`${process.env.URL}/public/brick.jpg`}/>
 
       <div className='h' style={{height: '100%', maxWidth: '100%'}}>
         <NavBar />

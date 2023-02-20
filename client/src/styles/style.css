@@ -55,6 +55,8 @@ html, body, #root, .app {
   bottom: 0;
   left: 0;
   object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 h1, h2, h3 {

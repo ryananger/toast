@@ -48,7 +48,7 @@
   width: calc(100% - 60px);
   margin: 24px;
   margin-bottom: 1.5vh;
-  box-sizing: border-box;
+  box-sizing: content-box;
   justify-content: space-around;
   align-items: center;
   border-radius: 20px;

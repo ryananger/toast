@@ -17,7 +17,7 @@ const NavBar = function() {
 
   return (
     <div className='navbar v'>
-      <img className='navImage' src='http://localhost:4001/public/toast_small.png'/>
+      <img className='navImage' src={`${process.env.URL}/public/toast_small.png`}/>
       <div className='navButtons v'>
         <div className={'navButton' + checkView('home')}    onClick={()=>{setView('home')}}>HOME</div>
         <div className={'navButton' + checkView('menu')}    onClick={()=>{setView('menu')}}>MENU</div>
