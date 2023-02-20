@@ -15,13 +15,17 @@ const NavBar = function() {
       return view === str ? ' viewing' : '';
   };
 
+  var button = function(str) {
+    return <div className={'navButton' + checkView(str)} onClick={()=>{setView(str)}}>{str.toUpperCase()}</div>
+  };
+
   return (
     <div className='navbar v'>
       <img className='navImage' src={`${process.env.URL}/public/toast_small.png`}/>
       <div className='navButtons v'>
-        <div className={'navButton' + checkView('home')}    onClick={()=>{setView('home')}}>HOME</div>
-        <div className={'navButton' + checkView('menu')}    onClick={()=>{setView('menu')}}>MENU</div>
-        <div className={'navButton' + checkView('gallery')} onClick={()=>{setView('gallery')}}>GALLERY</div>
+        {button('home')}
+        {button('menu')}
+        {button('gallery')}
       </div>
       <div className='orderButton h' onClick={()=>{window.open('https://ferndale.ordereatattoast.com/', '_blank')}}>
         <h1>ORDER</h1>

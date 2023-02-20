@@ -9,8 +9,7 @@
 
 .navImage {
   z-index: -1;
-  position: absolute;
-  top: 1vh;
+  margin-top: 1.2vh;
 }
 
 .navButtons {
@@ -77,8 +76,4 @@
   border-radius: 20px;
   background-color: var(--trCream);
   box-shadow: 0 6px 6px var(--shadow);
-}
-
-.map:hover {
-  cursor: pointer;
 }

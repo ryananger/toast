@@ -34,7 +34,6 @@ html, body, #root, .app {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  overflow: hidden;
   padding: 0;
   margin: 0;
   height: 100%;
@@ -97,14 +96,34 @@ h1, h2, h3 {
   background: var(--trCream);
 }
 
+.portrait {
+  margin: 0;
+  margin-left: 2vh;
+  margin-right: 2vh;
+  max-width: calc(100% - 4vh);
+  height: calc(100% - 180px - 2vh);
+  font-size: 1.8vh;
+  background: linear-gradient(to bottom, var(--trCream) 60%, #ffd8cfcb 95%);
+}
+
+.phone {
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  padding-top: 1vh;
+  border-radius: 0;
+  font-size: 4vmin;
+  background: linear-gradient(to bottom, var(--trCream) 60%, #ffd8cfcb 95%);
+  height: calc(100% - 32px - 1vh);
+}
+
 .mainImages {
   flex: none;
   width: 40%;
   height: 100%;
   padding-left: 2vh;
   justify-content: space-between;
-  /* border: 1px solid var(--darkText); */
-  /* border-style: none none none solid; */
+  margin-left: 1vh;
 }
 
 .mainImage {

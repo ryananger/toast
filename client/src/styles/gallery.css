@@ -12,6 +12,13 @@
   background: radial-gradient(ellipse at bottom, #ff2a003a, transparent 70%);
 }
 
+.phone .gallery {
+  border: 0;
+  height: 100%;
+  margin: 0;
+  border-top: 1px solid var(--coal);
+}
+
 .imageViewer {
   height: 100%;
   width: 100%;
@@ -48,6 +55,7 @@
 .zoomImage {
   border: 4px solid black;
   box-shadow: 0 0 100px 100px #29100bba;
+  max-width: 90%;
 }
 
 .zoomImage:hover {

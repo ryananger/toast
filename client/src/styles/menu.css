@@ -9,14 +9,13 @@
   margin: 2vh;
   margin-top: 0;
   border-bottom: 1px solid;
+  flex-wrap: wrap;
 }
 
 .menuButton {
-  border: none;
-  font-size: 1.8vh;
   box-sizing: border-box;
-  height: 30px;
   padding-top: 0;
+  margin: 6px;
 }
 
 .menuContainer {

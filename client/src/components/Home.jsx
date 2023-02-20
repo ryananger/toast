@@ -16,8 +16,6 @@ const Home = function() {
       For lunch, select from a variety of sandwiches, fresh salads, and homemade soups. At Toast of Ferndale, the food is excellent,
       the atmosphere is bright, and the service friendly, no matter the meal.
       <br/><br/>
-      ---
-      <br/><br/>
       <b>Located just north of the vibrant and friendly Downtown district of Ferndale!</b>
       <br/><br/>
       <div style={{textAlign: 'center', width: '100%'}}>
