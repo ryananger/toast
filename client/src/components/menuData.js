@@ -34,9 +34,6 @@ const menu = {
             price: '8'
           },
           {
-            name: 'br'
-          },
-          {
             name: 'Fresh Juice',
             info: 'orange. grapefruit.',
             price: '5.50'

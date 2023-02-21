@@ -4,17 +4,16 @@ import {FaFacebookSquare as FB,
 import {AiFillPhone as Phone} from 'react-icons/ai';
 
 import '../styles/style.css';
-import '../styles/navbar.css';
 import st            from 'ryscott-st';
 import {ax, helpers} from 'util';
 
-import Alert   from './Alert.jsx';
-import Home    from './Home.jsx';
-import Menu    from './Menu.jsx';
-import Gallery from './Gallery.jsx';
-import NavBar  from './NavBar.jsx';
-import NavBarPortrait from './NavBarPortrait.jsx';
-import NavBarPhone from './NavBarPhone.jsx';
+import Alert          from './Alert.jsx';
+import Home           from './Home.jsx';
+import Menu           from './Menu.jsx';
+import Gallery        from './Gallery.jsx';
+import NavBar         from './navbar/NavBar.jsx';
+import NavBarPortrait from './navbar/NavBarPortrait.jsx';
+import NavBarPhone    from './navbar/NavBarPhone.jsx';
 
 const mode = window.innerWidth < 540 ? 'phone' : (window.innerWidth > window.innerHeight ? 'landscape' : 'portrait');
 
@@ -31,9 +30,9 @@ const App = function() {
   var renderImages = function() {
     const viewImages = {
       home:  [5, 3, 6],
-      nav:   [5, 3, 6],
       menu:  [2, 4, 7],
-      order: [1, 3, 5]
+      order: [1, 3, 5],
+      nav:   []
     };
 
     return (

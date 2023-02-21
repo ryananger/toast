@@ -31,7 +31,7 @@
   margin: 1vh;
 }
 
-.portrait .imageContainer {
+.portrait .imageContainer, .phone .imageContainer {
   height: unset;
   width: 90%;
 }

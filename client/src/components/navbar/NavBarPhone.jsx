@@ -4,11 +4,11 @@ import {FaFacebookSquare as FB,
 import {AiFillPhone as Phone} from 'react-icons/ai';
 import {GiHamburgerMenu as Stack} from 'react-icons/gi';
 
-import '../styles/navbarPh.css';
+import '../../styles/navbarPh.css';
 import st            from 'ryscott-st';
 import {ax, helpers} from 'util';
 
-const NavBar = function() {
+const NavBarPhone = function() {
   const view    = st.view;
   const setView = st.setView;
 
@@ -48,5 +48,5 @@ const NavBar = function() {
   return view === 'nav' ? nav.full : nav.min;
 };
 
-export default NavBar;
+export default NavBarPhone;
 

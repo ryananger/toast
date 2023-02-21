@@ -3,7 +3,7 @@ import {FaFacebookSquare as FB,
         FaInstagram as Insta} from 'react-icons/fa';
 import {AiFillPhone as Phone} from 'react-icons/ai';
 
-import '../styles/navbar.css';
+import '../../styles/navbar.css';
 import st            from 'ryscott-st';
 import {ax, helpers} from 'util';
 

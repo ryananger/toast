@@ -39,7 +39,7 @@ html, body, #root, .app {
   height: 100%;
   width: 100%;
   font-family: Jost;
-  font-size: 2vh;
+  font-size: 2vmin;
 
   color: var(--darkText);
 }
