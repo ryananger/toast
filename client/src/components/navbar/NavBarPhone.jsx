@@ -19,7 +19,7 @@ const NavBarPhone = function() {
   const nav = {
     full: (
       <div className='navbarPh v'>
-        <img className='navImagePh' src={`${process.env.URL}/public/toast_float.png`}/>
+        <img className='navImagePh' src={`${st.URL}/public/toast_float.png`}/>
         <div className='navButtonsPh v'>
           {button('home')}
           {button('menu')}

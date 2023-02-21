@@ -11,7 +11,7 @@ const Gallery = function() {
     var images = [];
 
     for (var i = 1; i <= 7; i++) {
-      var src = process.env.URL + '/public/food' + i + '.jpg';
+      var src = st.URL + '/public/food' + i + '.jpg';
 
       images.push(
         <div key={i} className='imageContainer v'>
@@ -24,7 +24,7 @@ const Gallery = function() {
   };
 
   var renderModal = function() {
-    var src = process.env.URL + '/public/food' + image + '.jpg';
+    var src = st.URL + '/public/food' + image + '.jpg';
 
     return (
       <div className='galleryModal v'>

@@ -19,7 +19,7 @@ const Home = function() {
       <b>Located just north of the vibrant and friendly Downtown district of Ferndale!</b>
       <br/><br/>
       <div style={{textAlign: 'center', width: '100%'}}>
-        <img className='map' src={`${process.env.URL}/public/map.png`} onClick={()=>{window.open(mapURL, '_blank')}}/><br/><br/>
+        <img className='map' src={`${st.URL}/public/map.png`} onClick={()=>{window.open(mapURL, '_blank')}}/><br/><br/>
         <b>
           23144 Woodward Ave.<br/>
           Ferndale, Michigan 48220

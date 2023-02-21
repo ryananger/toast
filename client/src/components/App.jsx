@@ -16,10 +16,13 @@ import NavBarPortrait from './navbar/NavBarPortrait.jsx';
 import NavBarPhone    from './navbar/NavBarPhone.jsx';
 
 const mode = window.innerWidth < 540 ? 'phone' : (window.innerWidth > window.innerHeight ? 'landscape' : 'portrait');
+const URL  = 'http://ryananger.github.io/toast';
 
 const App = function() {
   const [user, setUser] = st.newState('user', useState(null));
   const [view, setView] = st.newState('view', useState(mode === 'phone' ? 'nav' : 'home'));
+
+  st.URL = URL;
 
   const views = {
     home:    <Home />,
@@ -37,9 +40,9 @@ const App = function() {
 
     return (
       <div className='mainImages v'>
-        <img className='mainImage img' src={`${process.env.URL}/public/food${viewImages[view][0]}.jpg`}/>
-        <img className='mainImage img' src={`${process.env.URL}/public/food${viewImages[view][1]}.jpg`}/>
-        <img className='mainImage img' src={`${process.env.URL}/public/food${viewImages[view][2]}.jpg`}/>
+        <img className='mainImage img' src={`${URL}/public/food${viewImages[view][0]}.jpg`}/>
+        <img className='mainImage img' src={`${URL}/public/food${viewImages[view][1]}.jpg`}/>
+        <img className='mainImage img' src={`${URL}/public/food${viewImages[view][2]}.jpg`}/>
       </div>
     );
   };
@@ -75,7 +78,7 @@ const App = function() {
   return (
     <div id='app' className='app h'>
       <Alert />
-      <img className='bgImage' src={`${process.env.URL}/public/brick.jpg`}/>
+      <img className='bgImage' src={`${URL}/public/brick.jpg`}/>
       {modes[mode]}
     </div>
   )

@@ -21,7 +21,7 @@ const NavBar = function() {
 
   return (
     <div className='navbar v'>
-      <img className='navImage' src={`${process.env.URL}/public/toast_small.png`}/>
+      <img className='navImage' src={`${st.URL}/public/toast_small.png`}/>
       <div className='navButtons v'>
         {button('home')}
         {button('menu')}

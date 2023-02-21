@@ -21,7 +21,7 @@ const NavBar = function() {
 
   return (
     <div className='navbarP h'>
-      <img className='navImageP' src={`${process.env.URL}/public/toast_float.png`}/>
+      <img className='navImageP' src={`${st.URL}/public/toast_float.png`}/>
       <div className='navButtonsP v'>
         <div className='h' style={{width: '100%'}}>
           <div className='orderButtonP h' onClick={()=>{window.open('https://ferndale.ordereatattoast.com/', '_blank')}}>

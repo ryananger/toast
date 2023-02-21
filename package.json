@@ -7,7 +7,7 @@
   "private": true,
   "homepage": "http://ryananger.github.io/toast",
   "scripts": {
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d client/dist",
     "start": "webpack --mode=development -w",
     "dev": "webpack serve --open",
     "server": "node server/index.js -w"
