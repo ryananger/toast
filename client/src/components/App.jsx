@@ -16,7 +16,7 @@ import NavBarPortrait from './navbar/NavBarPortrait.jsx';
 import NavBarPhone    from './navbar/NavBarPhone.jsx';
 
 const mode = window.innerWidth < 540 ? 'phone' : (window.innerWidth > window.innerHeight ? 'landscape' : 'portrait');
-const URL  = 'http://ryananger.github.io/toast';
+const URL  = 'https://ryananger.github.io/toast';
 
 const App = function() {
   const [user, setUser] = st.newState('user', useState(null));
