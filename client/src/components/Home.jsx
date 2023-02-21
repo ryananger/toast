@@ -25,6 +25,38 @@ const Home = function() {
           Ferndale, Michigan 48220
         </b>
         <br/><br/>
+        <div className='v'>
+          <b>Hours: </b><br/>
+          <div className='h' style={{width: '260px'}}>
+            <div>Monday</div>
+            <div>8 AM–3 PM</div>
+          </div>
+          <div className='h' style={{width: '260px'}}>
+            <div>Tuesday</div>
+            <div>8 AM–3 PM</div>
+          </div>
+          <div className='h' style={{width: '260px'}}>
+            <div>Wednesday</div>
+            <div>8 AM–3 PM</div>
+          </div>
+          <div className='h' style={{width: '260px'}}>
+            <div>Thursday</div>
+            <div>8 AM–3 PM</div>
+          </div>
+          <div className='h' style={{width: '260px'}}>
+            <div>Friday</div>
+            <div>8 AM–3 PM</div>
+          </div>
+          <div className='h' style={{width: '260px'}}>
+            <div>Saturday</div>
+            <div>8 AM–4 PM</div>
+          </div>
+          <div className='h' style={{width: '260px'}}>
+            <div>Sunday</div>
+            <div>8 AM–4 PM</div>
+          </div>
+        </div>
+        <br/><br/>
       </div>
     </div>
   )

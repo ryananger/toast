@@ -41,12 +41,6 @@
   margin-top: -6px;
 }
 
-.navButtonPh:hover, .viewingPh {
-  cursor: pointer;
-  color: var(--firehouse);
-  transition: color 0s;
-}
-
 .viewingPh {
   text-shadow: 0 2px 1px var(--darkText);
 }
@@ -69,11 +63,6 @@
   color: rgba(248, 237, 230, 0.932);
   justify-content: center;
   border: 1px solid var(--darkText);
-}
-
-.orderButtonPh:hover {
-  cursor: pointer;
-  color: white;
 }
 
 .contactButtonsPh {
