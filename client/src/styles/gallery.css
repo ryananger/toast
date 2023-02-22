@@ -39,7 +39,7 @@
 
 .galleryImage {
   width: 95%;
-  transition: width 0.25s;
+  transition: width 0.25s, opacity 0.5s;
   box-shadow: 0 4px 6px #7729178c;
 }
 

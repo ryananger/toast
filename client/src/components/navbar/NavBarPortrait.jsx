@@ -7,6 +7,8 @@ import '../../styles/navbarP.css';
 import st            from 'ryscott-st';
 import {ax, helpers} from 'util';
 
+import SmoothImage from '../SmoothImage.jsx';
+
 const NavBar = function() {
   const view    = st.view;
   const setView = st.setView;
@@ -21,7 +23,7 @@ const NavBar = function() {
 
   return (
     <div className='navbarP h'>
-      <img className='navImageP' src={`${st.URL}/public/toast_float.png`}/>
+      <SmoothImage className='navImageP' src={`${st.URL}/public/toast_float.png`}/>
       <div className='navButtonsP v'>
         <div className='h' style={{width: '100%'}}>
           <div className='orderButtonP h' onClick={()=>{window.open('https://ferndale.ordereatattoast.com/', '_blank')}}>

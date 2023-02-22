@@ -9,6 +9,7 @@ import {ax, helpers} from 'util';
 
 import Alert          from './Alert.jsx';
 import Home           from './Home.jsx';
+import SmoothImage    from './SmoothImage.jsx';
 import Menu           from './Menu.jsx';
 import Gallery        from './Gallery.jsx';
 import NavBar         from './navbar/NavBar.jsx';
@@ -40,9 +41,9 @@ const App = function() {
 
     return (
       <div className='mainImages v'>
-        <img className='mainImage img' src={`${URL}/public/food${viewImages[view][0]}.jpg`}/>
-        <img className='mainImage img' src={`${URL}/public/food${viewImages[view][1]}.jpg`}/>
-        <img className='mainImage img' src={`${URL}/public/food${viewImages[view][2]}.jpg`}/>
+        {viewImages[view].map(function(num, i) {
+          return <SmoothImage key={i} className='mainImage img' src={`${URL}/public/food${num}.jpg`}/>
+        })}
       </div>
     );
   };

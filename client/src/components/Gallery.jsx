@@ -4,6 +4,8 @@ import '../styles/gallery.css';
 import st            from 'ryscott-st';
 import {ax, helpers} from 'util';
 
+import SmoothImage from './SmoothImage.jsx';
+
 const Gallery = function() {
   const [image, setImage] = useState(null);
 
@@ -15,7 +17,7 @@ const Gallery = function() {
 
       images.push(
         <div key={i} className='imageContainer v'>
-          <img className='galleryImage img' src={src} index={i} onClick={(e)=>{setImage(e.target.getAttribute('index'))}}/>
+          <SmoothImage className='galleryImage img' src={src} index={i} onClick={(e)=>{setImage(e.target.getAttribute('index'))}}/>
         </div>
       );
     }
@@ -28,7 +30,7 @@ const Gallery = function() {
 
     return (
       <div className='galleryModal v'>
-        <img className='zoomImage img' src={src} onClick={()=>{setImage(null)}}/>
+        <SmoothImage className='zoomImage img' src={src} onClick={()=>(setImage(null))}/>
       </div>
     );
   };

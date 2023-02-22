@@ -7,6 +7,8 @@ import '../../styles/navbar.css';
 import st            from 'ryscott-st';
 import {ax, helpers} from 'util';
 
+import SmoothImage from '../SmoothImage.jsx';
+
 const NavBar = function() {
   const view    = st.view;
   const setView = st.setView;
@@ -21,7 +23,7 @@ const NavBar = function() {
 
   return (
     <div className='navbar v'>
-      <img className='navImage' src={`${st.URL}/public/toast_small.png`}/>
+      <SmoothImage className='navImage' src={`${st.URL}/public/toast_small.png`}/>
       <div className='navButtons v'>
         {button('home')}
         {button('menu')}

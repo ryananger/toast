@@ -8,6 +8,8 @@ import '../../styles/navbarPh.css';
 import st            from 'ryscott-st';
 import {ax, helpers} from 'util';
 
+import SmoothImage from '../SmoothImage.jsx';
+
 const NavBarPhone = function() {
   const view    = st.view;
   const setView = st.setView;
@@ -19,7 +21,7 @@ const NavBarPhone = function() {
   const nav = {
     full: (
       <div className='navbarPh v'>
-        <img className='navImagePh' src={`${st.URL}/public/toast_float.png`}/>
+        <SmoothImage className='navImagePh' src={`${st.URL}/public/toast_float.png`}/>
         <div className='navButtonsPh v'>
           {button('home')}
           {button('menu')}
