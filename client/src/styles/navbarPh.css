@@ -22,7 +22,9 @@
 
 .navImagePh {
   z-index: -1;
+  width: 100%;
   max-width: 260px;
+  aspect-ratio: 1.125 auto;
 }
 
 .navButtonsPh {

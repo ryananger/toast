@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 
-import '../styles/home.css';
 import st            from 'ryscott-st';
 import {ax, helpers} from 'util';
+
+import SmoothImage from './SmoothImage.jsx';
 
 const Home = function() {
   return (
@@ -19,7 +20,7 @@ const Home = function() {
       <b>Located just north of the vibrant and friendly Downtown district of Ferndale!</b>
       <br/><br/>
       <div style={{textAlign: 'center', width: '100%'}}>
-        <img className='map' src={`${st.URL}/public/map.png`} onClick={()=>{window.open(mapURL, '_blank')}}/><br/><br/>
+        <SmoothImage className='map' src={`${st.URL}/public/map.webp`} onClick={()=>{window.open(mapURL, '_blank')}}/><br/><br/>
         <b>
           23144 Woodward Ave.<br/>
           Ferndale, Michigan 48220

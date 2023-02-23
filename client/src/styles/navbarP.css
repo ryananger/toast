@@ -8,7 +8,7 @@
 }
 
 .navImageP {
-  z-index: -1;
+  flex: none;
   height: 160px;
   width: 180px;
 }

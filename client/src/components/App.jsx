@@ -1,23 +1,23 @@
-import React, {useEffect, useState} from 'react';
+import React, {Suspense, useEffect, useState} from 'react';
 import {FaFacebookSquare as FB,
         FaInstagram as Insta} from 'react-icons/fa';
 import {AiFillPhone as Phone} from 'react-icons/ai';
 
-import '../styles/style.css';
+import 'styles';
 import st            from 'ryscott-st';
 import {ax, helpers} from 'util';
 
-import Alert          from './Alert.jsx';
 import Home           from './Home.jsx';
 import SmoothImage    from './SmoothImage.jsx';
-import Menu           from './Menu.jsx';
-import Gallery        from './Gallery.jsx';
-import NavBar         from './navbar/NavBar.jsx';
-import NavBarPortrait from './navbar/NavBarPortrait.jsx';
-import NavBarPhone    from './navbar/NavBarPhone.jsx';
+
+const Menu           = React.lazy(() => import('./Menu.jsx'));
+const Gallery        = React.lazy(() => import('./Gallery.jsx'));
+const NavBar         = React.lazy(() => import('./navbar/NavBar.jsx'));
+const NavBarPortrait = React.lazy(() => import('./navbar/NavBarPortrait.jsx'));
+const NavBarPhone    = React.lazy(() => import('./navbar/NavBarPhone.jsx'));
 
 const mode = window.innerWidth < 540 ? 'phone' : (window.innerWidth > window.innerHeight ? 'landscape' : 'portrait');
-const URL  = 'https://ryananger.github.io/toast';
+const URL  = 'http://localhost:4001/';
 
 const App = function() {
   const [user, setUser] = st.newState('user', useState(null));
@@ -27,8 +27,16 @@ const App = function() {
 
   const views = {
     home:    <Home />,
-    menu:    <Menu />,
-    gallery: <Gallery />
+    menu:    (
+    <Suspense fallback={<div style={{width: '100%', height: '100%'}}/>}>
+      <Menu />
+    </Suspense>
+    ),
+    gallery: (
+      <Suspense fallback={<div style={{width: '100%', height: '100%'}}/>}>
+        <Gallery />
+      </Suspense>
+    )
   };
 
   var renderImages = function() {
@@ -42,7 +50,7 @@ const App = function() {
     return (
       <div className='mainImages v'>
         {viewImages[view].map(function(num, i) {
-          return <SmoothImage key={i} className='mainImage img' src={`${URL}/public/food${num}.jpg`}/>
+          return <SmoothImage key={i} className='mainImage img' src={`${URL}/public/food${num}.webp`}/>
         })}
       </div>
     );
@@ -51,26 +59,32 @@ const App = function() {
   const modes = {
     landscape: (
       <div className='h' style={{height: '100%', width: '100%', maxWidth: '1500px'}}>
-        <NavBar/>
+        <Suspense fallback={<div className='navbar'/>}>
+          <NavBar/>
+        </Suspense>
         <div className='main h'>
-          {views[view]}
+            {views[view]}
           {view !== 'gallery' && renderImages()}
         </div>
       </div>
     ),
     portrait: (
       <div className='v' style={{height: '100%', width: '100%'}}>
-        <NavBarPortrait/>
+        <Suspense fallback={<div className='navbarP'/>}>
+          <NavBarPortrait/>
+        </Suspense>
         <div className='main portrait v'>
-          {views[view]}
+            {views[view]}
         </div>
       </div>
     ),
     phone: (
       <div className='v' style={{height: '100%', width: '100%'}}>
-        <NavBarPhone/>
+        <Suspense fallback={<div className='navbarPh'/>}>
+          <NavBarPhone/>
+        </Suspense>
         <div className='main phone v'>
-          {views[view]}
+            {views[view]}
         </div>
       </div>
     ),
@@ -78,8 +92,7 @@ const App = function() {
 
   return (
     <div id='app' className='app h'>
-      <Alert />
-      <img className='bgImage' src={`${URL}/public/brick.jpg`}/>
+      <img className='bgImage' src={`${URL}/public/brick.webp`} alt='bg'/>
       {modes[mode]}
     </div>
   )

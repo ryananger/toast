@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 
-import '../styles/gallery.css';
 import st            from 'ryscott-st';
 import {ax, helpers} from 'util';
 
@@ -13,7 +12,7 @@ const Gallery = function() {
     var images = [];
 
     for (var i = 1; i <= 7; i++) {
-      var src = st.URL + '/public/food' + i + '.jpg';
+      var src = st.URL + '/public/food' + i + '.webp';
 
       images.push(
         <div key={i} className='imageContainer v'>
@@ -26,7 +25,7 @@ const Gallery = function() {
   };
 
   var renderModal = function() {
-    var src = st.URL + '/public/food' + image + '.jpg';
+    var src = st.URL + '/public/food' + image + '.webp';
 
     return (
       <div className='galleryModal v'>

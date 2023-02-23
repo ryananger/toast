@@ -3,7 +3,6 @@ import {FaFacebookSquare as FB,
         FaInstagram as Insta} from 'react-icons/fa';
 import {AiFillPhone as Phone} from 'react-icons/ai';
 
-import '../../styles/navbarP.css';
 import st            from 'ryscott-st';
 import {ax, helpers} from 'util';
 
@@ -23,7 +22,7 @@ const NavBar = function() {
 
   return (
     <div className='navbarP h'>
-      <SmoothImage className='navImageP' src={`${st.URL}/public/toast_float.png`}/>
+      <SmoothImage className='navImageP' src={`${st.URL}/public/toast_float.webp`}/>
       <div className='navButtonsP v'>
         <div className='h' style={{width: '100%'}}>
           <div className='orderButtonP h' onClick={()=>{window.open('https://ferndale.ordereatattoast.com/', '_blank')}}>

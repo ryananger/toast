@@ -1,5 +1,6 @@
 const path = require("path");
 const Dotenv = require('dotenv-webpack');
+const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -43,6 +44,13 @@ module.exports = {
   },
 
   plugins: [
-    new Dotenv()
+    new Dotenv(),
+    new CompressionPlugin({
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
+    })
   ]
 }

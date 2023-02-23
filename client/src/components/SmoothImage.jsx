@@ -11,6 +11,7 @@ const SmoothImage = function({className, src, index, onClick}) {
       onClick={onClick}
       onLoad={()=>{setMod(' visible')}}
       loading='lazy'
+      alt={src}
     />
   );
 };

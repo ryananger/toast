@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 
-import '../styles/menu.css';
 import st            from 'ryscott-st';
 import {ax, helpers} from 'util';
 

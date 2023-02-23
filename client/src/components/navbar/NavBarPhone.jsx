@@ -4,7 +4,6 @@ import {FaFacebookSquare as FB,
 import {AiFillPhone as Phone} from 'react-icons/ai';
 import {GiHamburgerMenu as Stack} from 'react-icons/gi';
 
-import '../../styles/navbarPh.css';
 import st            from 'ryscott-st';
 import {ax, helpers} from 'util';
 
@@ -21,7 +20,7 @@ const NavBarPhone = function() {
   const nav = {
     full: (
       <div className='navbarPh v'>
-        <SmoothImage className='navImagePh' src={`${st.URL}/public/toast_float.png`}/>
+        <SmoothImage className='navImagePh' src={`${st.URL}/public/toast_float.webp`}/>
         <div className='navButtonsPh v'>
           {button('home')}
           {button('menu')}
