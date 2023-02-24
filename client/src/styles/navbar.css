@@ -5,6 +5,7 @@
   width: 260px;
   height: calc(100% - 2vh);
   box-sizing: border-box;
+  justify-content: space-between;
 }
 
 .navImage {
@@ -40,17 +41,19 @@
   text-shadow: 0 2px 1px var(--darkText);
 }
 
-.orderButton {
-  position: absolute;
-  bottom: 60px;
+.orderButton,
+.contactButtons,
+.reserveButton {
   height: 48px;
   width: calc(100% - 60px);
-  margin: 24px;
   margin-bottom: 1.5vh;
-  box-sizing: content-box;
+  box-sizing: border-box;
   justify-content: space-around;
   align-items: center;
   border-radius: 20px;
+}
+
+.orderButton {
   background-color: var(--firehouse);
   box-shadow: 0 3px 4px #39161099;
   font-size: 20px;
@@ -63,17 +66,8 @@
   color: white;
 }
 
-.contactButtons {
-  position: absolute;
-  bottom: 0;
-  height: 48px;
-  width: calc(100% - 60px);
-  margin: 24px;
-  margin-bottom: 1.5vh;
-  box-sizing: border-box;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 20px;
+.contactButtons, .reserveButton {
   background-color: var(--trCream);
   box-shadow: 0 6px 6px var(--shadow);
+  font-size: 20px;
 }

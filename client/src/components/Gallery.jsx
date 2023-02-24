@@ -16,7 +16,7 @@ const Gallery = function() {
 
       images.push(
         <div key={i} className='imageContainer v'>
-          <SmoothImage className='galleryImage img' src={src} index={i} onClick={(e)=>{setImage(e.target.getAttribute('index'))}}/>
+          <SmoothImage className='galleryImage img' transition={'width 0.5s'} src={src} index={i} onClick={(e)=>{setImage(e.target.getAttribute('index'))}}/>
         </div>
       );
     }

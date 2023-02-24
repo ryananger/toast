@@ -7,44 +7,46 @@ import 'styles';
 import st            from 'ryscott-st';
 import {ax, helpers} from 'util';
 
-import Home           from './Home.jsx';
-import SmoothImage    from './SmoothImage.jsx';
+import Home        from './Home.jsx';
+import SmoothImage from './SmoothImage.jsx';
+import Lazy        from './Lazy.jsx';
 
-const Menu           = React.lazy(() => import('./Menu.jsx'));
+const Reserve        = React.lazy(() => import('./Reserve.jsx'));
+const Menu           = React.lazy(() => import('./menu/Menu.jsx'));
 const Gallery        = React.lazy(() => import('./Gallery.jsx'));
 const NavBar         = React.lazy(() => import('./navbar/NavBar.jsx'));
 const NavBarPortrait = React.lazy(() => import('./navbar/NavBarPortrait.jsx'));
 const NavBarPhone    = React.lazy(() => import('./navbar/NavBarPhone.jsx'));
 
 const mode = window.innerWidth < 540 ? 'phone' : (window.innerWidth > window.innerHeight ? 'landscape' : 'portrait');
-const URL  = 'http://localhost:4001/';
+const URL  = 'https://ryananger.github.io/toast';
 
 const App = function() {
-  const [user, setUser] = st.newState('user', useState(null));
-  const [view, setView] = st.newState('view', useState(mode === 'phone' ? 'nav' : 'home'));
+  const [user, setUser]       = st.newState('user', useState(null));
+  const [view, setView]       = st.newState('view', useState(mode === 'phone' ? 'nav' : 'home'));
+  const [reserve, setReserve] = st.newState('reserve', useState(false));
 
   st.URL = URL;
 
+  const fallback = <div style={{width: '100%', height: '100%'}}/>;
+
   const views = {
-    home:    <Home />,
-    menu:    (
-    <Suspense fallback={<div style={{width: '100%', height: '100%'}}/>}>
-      <Menu />
-    </Suspense>
+    home: <Home />,
+    menu: (
+      <Lazy Component={Menu} fallback={fallback}/>
     ),
     gallery: (
-      <Suspense fallback={<div style={{width: '100%', height: '100%'}}/>}>
-        <Gallery />
-      </Suspense>
+      <Lazy Component={Gallery} fallback={fallback}/>
     )
   };
 
   var renderImages = function() {
     const viewImages = {
-      home:  [5, 3, 6],
-      menu:  [2, 4, 7],
-      order: [1, 3, 5],
-      nav:   []
+      home:    [5, 3, 6],
+      menu:    [2, 4, 7],
+      order:   [1, 3, 5],
+      reserve: [2, 4, 7],
+      nav:     []
     };
 
     return (
@@ -59,9 +61,7 @@ const App = function() {
   const modes = {
     landscape: (
       <div className='h' style={{height: '100%', width: '100%', maxWidth: '1500px'}}>
-        <Suspense fallback={<div className='navbar'/>}>
-          <NavBar/>
-        </Suspense>
+        <Lazy Component={NavBar} fallback={<div className='navbar'/>}/>
         <div className='main h'>
             {views[view]}
           {view !== 'gallery' && renderImages()}
@@ -70,9 +70,7 @@ const App = function() {
     ),
     portrait: (
       <div className='v' style={{height: '100%', width: '100%'}}>
-        <Suspense fallback={<div className='navbarP'/>}>
-          <NavBarPortrait/>
-        </Suspense>
+        <Lazy Component={NavBarPortrait} fallback={<div className='navbarP'/>}/>
         <div className='main portrait v'>
             {views[view]}
         </div>
@@ -80,20 +78,19 @@ const App = function() {
     ),
     phone: (
       <div className='v' style={{height: '100%', width: '100%'}}>
-        <Suspense fallback={<div className='navbarPh'/>}>
-          <NavBarPhone/>
-        </Suspense>
+        <Lazy Component={NavBarPhone} fallback={<div className='navbarPh'/>}/>
         <div className='main phone v'>
             {views[view]}
         </div>
       </div>
-    ),
+    )
   };
 
   return (
     <div id='app' className='app h'>
       <img className='bgImage' src={`${URL}/public/brick.webp`} alt='bg'/>
       {modes[mode]}
+      {reserve && <Lazy Component={Reserve}/>}
     </div>
   )
 };
