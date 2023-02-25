@@ -20,7 +20,9 @@ const NavBarPhone = function() {
   const nav = {
     full: (
       <div className='navbarPh v'>
-        <SmoothImage className='navImagePh' src={`${st.URL}/public/toast_float.webp`}/>
+        <div className='navImageContainer v'>
+          <SmoothImage className='navImagePh' src={`${st.URL}/public/toast_float.webp`}/>
+        </div>
         <div className='navButtonsPh v'>
           {button('home')}
           {button('menu')}
