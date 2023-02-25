@@ -25,6 +25,9 @@ const NavBarPhone = function() {
           {button('home')}
           {button('menu')}
           {button('gallery')}
+          <div className='navButtonPh' onClick={()=>{st.setReserve(true)}}>
+            <p>RESERVE</p>
+          </div>
           <div className='orderButtonPh h' onClick={()=>{window.open('https://ferndale.ordereatattoast.com/', '_blank')}}>
             <h1>ORDER</h1>
           </div>

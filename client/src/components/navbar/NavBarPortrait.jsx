@@ -28,6 +28,9 @@ const NavBar = function() {
           <div className='orderButtonP h' onClick={()=>{window.open('https://ferndale.ordereatattoast.com/', '_blank')}}>
             <h1>ORDER</h1>
           </div>
+          <div className='navButtonP' onClick={()=>{st.setReserve(true)}}>
+            <p>RESERVE</p>
+          </div>
           <div className='contactButtonsP h'>
             <FB    className='icon' size={36} onClick={()=>{window.open('https://www.facebook.com/toastferndale', '_blank')}}/>
             <Insta className='icon' size={36} onClick={()=>{window.open('https://www.instagram.com/EatAtToast/', '_blank')}}/>
