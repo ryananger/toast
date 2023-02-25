@@ -22,6 +22,7 @@
 
 .navImageContainer {
   overflow: hidden;
+  height: 100%;
 }
 
 .navImagePh {

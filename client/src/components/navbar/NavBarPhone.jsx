@@ -21,7 +21,7 @@ const NavBarPhone = function() {
     full: (
       <div className='navbarPh v'>
         <div className='navImageContainer v'>
-          <img className='navImagePh' src={`${st.URL}/public/toast_float.webp`}/>
+          <SmoothImage className='navImagePh' src={`${st.URL}/public/toast_float.webp`}/>
         </div>
         <div className='navButtonsPh v'>
           {button('home')}

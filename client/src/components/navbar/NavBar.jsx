@@ -20,18 +20,10 @@ const NavBar = function() {
     return <div className={'navButton' + checkView(str)} onClick={()=>{setView(str)}}>{str.toUpperCase()}</div>
   };
 
-  var renderReservation = function() {
-    return (
-      <form id='reservation'>
-
-      </form>
-    )
-  };
-
   return (
     <div className='navbar v'>
       <div className='v' style={{width: '260px', height: '400px', overflow: 'hidden'}}>
-        <img className='navImage' src={`${st.URL}/public/toast_small.webp`}/>
+        <SmoothImage className='navImage' src={`${st.URL}/public/toast_small.webp`}/>
         <div className='navButtons v'>
           {button('home')}
           {button('menu')}
