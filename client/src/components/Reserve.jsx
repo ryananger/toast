@@ -5,8 +5,15 @@ import st            from 'ryscott-st';
 import {ax, helpers} from 'util';
 
 const Reserve = function() {
-  const [vis, setVis] = useState('visible');
-  const [mod, setMod] = useState('');
+  const [vis, setVis] = useState('hidden');
+  const [mod, setMod] = useState('close');
+
+  var openReserve = function() {
+    setTimeout(()=>{
+      setVis('visible');
+      setMod('');
+    }, 0);
+  };
 
   var closeReserve = function(e) {
     e.preventDefault();
@@ -51,6 +58,8 @@ const Reserve = function() {
 
     return options;
   };
+
+  useEffect(openReserve, []);
 
   return (
     <div className={'reserve v ' + vis} onClick={closeReserve}>
