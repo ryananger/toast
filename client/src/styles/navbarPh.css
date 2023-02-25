@@ -29,6 +29,7 @@
 
 .navButtonsPh {
   width: 244px;
+  margin-bottom: 2vh;
 }
 
 .navButtonPh {
@@ -40,7 +41,7 @@
 }
 
 .navButtonPh * {
-  margin-top: -6px;
+  margin-top: -9px;
 }
 
 .viewingPh {
@@ -48,7 +49,7 @@
 }
 
 .orderButtonPh, .contactButtonsPh, .navButtonPh {
-  height: 48px;
+  height: 42px;
   width: 100%;
   margin: 4px;
   margin-bottom: 1vh;
