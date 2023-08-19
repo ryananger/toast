@@ -47,7 +47,7 @@ const NavBar = function() {
           </div>
           <div className='contactButtons h'>
             <FB    className='icon' size={36} onClick={()=>{window.open('https://www.facebook.com/toastferndale', '_blank')}}/>
-            <Insta className='icon' size={36} onClick={()=>{window.open('https://www.instagram.com/EatAtToast/', '_blank')}}/>
+            <Insta className='icon' size={36} onClick={()=>{window.open('https://www.instagram.com/toastferndale/', '_blank')}}/>
             <Phone className='icon' size={36} onClick={()=>{window.open('tel:+12483980444', '_blank')}}/>
           </div>
         </div>
