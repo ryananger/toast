@@ -26,6 +26,8 @@ const App = function() {
   const [view, setView]       = st.newState('view', useState(mode === 'phone' ? 'nav' : 'home'));
   const [reserve, setReserve] = st.newState('reserve', useState(false));
 
+  const [style, setStyle] = useState({});
+
   st.URL = URL;
 
   const fallback = <div style={{width: '100%', height: '100%'}}/>;
@@ -62,9 +64,11 @@ const App = function() {
     landscape: (
       <div className='h' style={{height: '100%', width: '100%', maxWidth: '1500px'}}>
         <Lazy Component={NavBar} fallback={<div className='navbar'/>}/>
-        <div className='main h'>
-            {views[view]}
-          {view !== 'gallery' && renderImages()}
+        <div class='slide' style={{height: '100%', width: 'calc(100% - 260px)', position: 'relative'}}>
+          <div className='main web h' style={style}>
+              {views[view]}
+            {view !== 'gallery' && renderImages()}
+          </div>
         </div>
       </div>
     ),
@@ -85,6 +89,12 @@ const App = function() {
       </div>
     )
   };
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      setStyle({left: '0px'});
+    }, 1000);
+  }, []);
 
   return (
     <div id='app' className='app h'>

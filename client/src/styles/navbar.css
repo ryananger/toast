@@ -1,11 +1,13 @@
 .navbar {
-  position: relative;
+  position: absolute;
   flex: none;
   margin: 1vh;
   width: 260px;
   height: calc(100% - 2vh);
   box-sizing: border-box;
   justify-content: space-between;
+  right: 1000px;
+  transition: right 1s;
 }
 
 .navImage {

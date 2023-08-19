@@ -11,6 +11,7 @@ import SmoothImage from '../SmoothImage.jsx';
 const NavBar = function() {
   const view    = st.view;
   const setView = st.setView;
+  const [style, setStyle] = useState({});
 
   var checkView = function(str) {
       return view === str ? ' viewing' : '';
@@ -20,27 +21,35 @@ const NavBar = function() {
     return <div className={'navButton' + checkView(str)} onClick={()=>{setView(str)}}>{str.toUpperCase()}</div>
   };
 
+  useEffect(()=>{
+    setTimeout(()=>{
+      setStyle({right: '0px'});
+    }, 1000);
+  }, []);
+
   return (
-    <div className='navbar v'>
-      <div className='v' style={{width: '260px', height: '400px', overflow: 'hidden'}}>
-        <SmoothImage className='navImage' src={`${st.URL}/public/toast_small.webp`}/>
-        <div className='navButtons v'>
-          {button('home')}
-          {button('menu')}
-          {button('gallery')}
+    <div className='slide' style={{width: '260px', height: '100%', position: 'relative'}}>
+      <div className='navbar v' style={style}>
+        <div className='v' style={{width: '100%', height: '400px', overflow: 'hidden'}}>
+          <SmoothImage className='navImage' src={`${st.URL}/public/toast_small.webp`}/>
+          <div className='navButtons v'>
+            {button('home')}
+            {button('menu')}
+            {button('gallery')}
+          </div>
         </div>
-      </div>
-      <div className='v' style={{width: '260px'}}>
-        <div className='reserveButton icon h' onClick={()=>{st.setReserve(true)}}>
-          <h1>RESERVE</h1>
-        </div>
-        <div className='orderButton h' onClick={()=>{window.open('https://ferndale.ordereatattoast.com/', '_blank')}}>
-          <h1>ORDER</h1>
-        </div>
-        <div className='contactButtons h'>
-          <FB    className='icon' size={36} onClick={()=>{window.open('https://www.facebook.com/toastferndale', '_blank')}}/>
-          <Insta className='icon' size={36} onClick={()=>{window.open('https://www.instagram.com/EatAtToast/', '_blank')}}/>
-          <Phone className='icon' size={36} onClick={()=>{window.open('tel:+12483980444', '_blank')}}/>
+        <div className='v' style={{width: '100%'}}>
+          <div className='reserveButton icon h' onClick={()=>{st.setReserve(true)}}>
+            <h1>RESERVE</h1>
+          </div>
+          <div className='orderButton h' onClick={()=>{window.open('https://ferndale.ordereatattoast.com/', '_blank')}}>
+            <h1>ORDER</h1>
+          </div>
+          <div className='contactButtons h'>
+            <FB    className='icon' size={36} onClick={()=>{window.open('https://www.facebook.com/toastferndale', '_blank')}}/>
+            <Insta className='icon' size={36} onClick={()=>{window.open('https://www.instagram.com/EatAtToast/', '_blank')}}/>
+            <Phone className='icon' size={36} onClick={()=>{window.open('tel:+12483980444', '_blank')}}/>
+          </div>
         </div>
       </div>
     </div>
