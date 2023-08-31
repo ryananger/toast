@@ -58,8 +58,10 @@ html, body, #root, .app {
   width: 100%;
 }
 
-h1, h2, h3 {
+h1, h2, h3, b {
   margin: 0;
+  font-weight: 500;
+
 }
 
 .v {

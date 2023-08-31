@@ -3,6 +3,8 @@
   height: 100%;
   align-items: flex-start;
   overflow: auto;
+  padding: 1vh;
+  border-bottom: 2px solid var(--darkText);
 }
 
 .phone .home {

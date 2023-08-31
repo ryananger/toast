@@ -54,7 +54,7 @@ const App = function() {
     return (
       <div className='mainImages v'>
         {viewImages[view].map(function(num, i) {
-          return <SmoothImage key={i} className='mainImage img' src={`${URL}/public/food${num}.webp`}/>
+          return <img key={i} className='mainImage img' src={`${URL}/public/food${num}.webp`}/>
         })}
       </div>
     );
