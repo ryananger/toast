@@ -65,7 +65,7 @@ const App = function() {
       <div className='h' style={{height: '100%', width: '100%', maxWidth: '1500px'}}>
         <Lazy Component={NavBar} fallback={<div className='navbar'/>}/>
         <div class='slide' style={{height: '100%', width: 'calc(100% - 260px)', position: 'relative'}}>
-          <div className='main web h' style={style}>
+          <div className='main web h' style={view !== 'gallery' ? style : {...style, background: 'var(--trCream)'}}>
               {views[view]}
             {view !== 'gallery' && renderImages()}
           </div>

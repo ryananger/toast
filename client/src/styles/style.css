@@ -40,6 +40,7 @@ html, body, #root, .app {
   width: 100%;
   font-family: Jost;
   font-size: 2vmin;
+  overflow-x: hidden;
 
   color: var(--darkText);
 }
@@ -98,10 +99,6 @@ h1, h2, h3, b {
   position: absolute;
   left: 200vw;
   transition: left 1s;
-}
-
-.main:has(.gallery) {
-  background: var(--trCream);
 }
 
 .portrait {
