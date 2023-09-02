@@ -31,7 +31,7 @@ const NavBar = function() {
     <div className='slide' style={{width: '260px', height: '100%', position: 'relative'}}>
       <div className='navbar v' style={style}>
         <div className='v' style={{width: '100%', height: '400px', overflow: 'hidden'}}>
-          <SmoothImage className='navImage' src={`${st.URL}/public/toast_small.webp`}/>
+          <img className='navImage' src={`${st.URL}/public/toast_small.webp`}/>
           <div className='navButtons v'>
             {button('home')}
             {button('menu')}

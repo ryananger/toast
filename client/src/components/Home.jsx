@@ -5,12 +5,6 @@ import {ax, helpers} from 'util';
 
 import SmoothImage from './SmoothImage.jsx';
 
-const Br = function() {
-  return (
-    <div style={{height: '2vh', flex: 'none'}}/>
-  )
-};
-
 const Home = function() {
   return (
     <div className='home v'>
